@@ -7,33 +7,36 @@ header.header
 					li.header__top-menu-item
 						a.header__top-menu-link(href="#") #{item}
 
-			- var money = ["dollars", "russian rubles", "ukrainian hryvnia"]
-			ul.header__top-money
-				each item in money
-					li.header__top-money-item
-						a.header__top-money-link(href="#") #{item}
-
 			- var lang = ["en", "rus", "ua"]
 			ul.header__top-lang
 				each item in lang
 					li.header__top-lang-item
 						a.header__top-lang-link(href="#") #{item}
 
+			- var money = ["dollars", "russian rubles", "ukrainian hryvnia"]
+			ul.header__top-money
+				each item in money
+					li.header__top-money-item
+						a.header__top-money-link(href="#") #{item}
+
 	nav.nav
 		.container
 			.logo
 				figure.logo__wrap
 					a.logo__link(href="#")
-						img.logo__pic(src="")
+						img.logo__pic(src="assets/img/logo.png")
+
+			.user-tools
+				.user-tools__bag
+					span.user-tools__bag-text your bag
+					a.user-tools__bag-count(href="#" data-count="2")
+				.user-tools__search
+					figure.user-tools__search-wrap
+						a.user-tools__search-link(href="#")
+							img.user-tools__search-pic(src="assets/img/search.png")
 
 			- var menu = ["home", "catalog", "news", "sale", "about", "contact"]
-			ul.menu
+			ul.nav__menu
 				each item in menu
-					li.menu__item
-						a.menu__link(href="#") #{item}
-
-			.bag
-				span.bag__text your bag
-				a.bag__count(href="#") 2
-			.search
-				a.search__link(href="#") pic
+					li(class="nav__menu-item" + ((item == "catalog") ? ' ' + 'active' : ''))
+						a(href="#" class="nav__menu-link" + ((item == "sale") ? ' ' + 'nav__menu-link_mods' : '')) #{item}

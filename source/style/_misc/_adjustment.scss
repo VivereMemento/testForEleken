@@ -5,9 +5,9 @@ $footer-height: 100px;
 $body-font: $ffL;
 
 html {
+	height: 100%;
 	width:100%;
 	font-size: 100.01%;
-	height: 100%;
 
 	@if $responsive == true {
 		@include desktop {
@@ -29,7 +29,7 @@ html {
 }
 
 body {
-	font: 16px/1.42 $body-font;
+	font: 12px/12px $body-font;
     -webkit-font-smoothing: antialiased;
 	width:100%;
 	height:100% !important;
