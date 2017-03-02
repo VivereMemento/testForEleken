@@ -34,3 +34,15 @@ section.catalog
 
 		.catalog__load
 			a.catalog__load-link(href="#") load more...
+
+section.subscribe
+	.container
+		span.subtitle subscribe
+		h2.title Stay updated on news
+		.form-wrap
+			form#news(method="post", action="/send")
+				.form__input-item
+					label.form__label(for="news") News
+					input.form__input(type="text", placeholder="Your email address", id="news", name="news")
+				.form__btn-wrap
+					input.form__btn(type="submit", value="", form="news")

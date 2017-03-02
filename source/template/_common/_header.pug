@@ -41,10 +41,10 @@ header.header
 					figure.user-tools__search-wrap
 						a.user-tools__search-link(href="#")
 							img.user-tools__search-pic(src="assets/img/search.png")
-					.search-wrap
-						form#search(method="get", action="/search")
-							.search__input-item
-								label.search__label(for="search") Search
-								input.search__input(type="text", placeholder="Search", id="search", name="search")
-							.search__btn-wrap
-								input.search__btn(type="submit", value="", form="search")
+					.form-wrap.header__form-wrap_mods
+						form#search(method="post", action="/send")
+							.form__input-item
+								label.form__label(for="search") search
+								input.form__input.header__form-input_mods(type="text", placeholder="Search", id="search", name="search")
+							.form__btn-wrap
+								input.form__btn(type="submit", value="", form="search")

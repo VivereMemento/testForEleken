@@ -120,6 +120,12 @@
 
 /* --------- responsive mixins --------- */
 
+@mixin television {
+	@media screen and (min-width: 1800px) {
+		@content;
+	}
+}
+
 @mixin largeDesktop {
 	@media screen and (max-width: 1800px) {
 		@content;
