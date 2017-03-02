@@ -1,0 +1,39 @@
+header.header
+	.header__top
+		.container
+			- var items = ["delivery", "faq", "help"]
+			ul.header__top-menu
+				each item in items 
+					li.header__top-menu-item
+						a.header__top-menu-link(href="#") #{item}
+
+			- var money = ["dollars", "russian rubles", "ukrainian hryvnia"]
+			ul.header__top-money
+				each item in money
+					li.header__top-money-item
+						a.header__top-money-link(href="#") #{item}
+
+			- var lang = ["en", "rus", "ua"]
+			ul.header__top-lang
+				each item in lang
+					li.header__top-lang-item
+						a.header__top-lang-link(href="#") #{item}
+
+	nav.nav
+		.container
+			.logo
+				figure.logo__wrap
+					a.logo__link(href="#")
+						img.logo__pic(src="")
+
+			- var menu = ["home", "catalog", "news", "sale", "about", "contact"]
+			ul.menu
+				each item in menu
+					li.menu__item
+						a.menu__link(href="#") #{item}
+
+			.bag
+				span.bag__text your bag
+				a.bag__count(href="#") 2
+			.search
+				a.search__link(href="#") pic

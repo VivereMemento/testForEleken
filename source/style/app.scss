@@ -1,0 +1,27 @@
+$responsive: true;
+
+/* --------- colors --------- */
+
+$grey: #333;;
+$black: #2d2d31;
+
+/* --------- fonts --------- */
+
+$ffP: 'Playfair Display', serif;
+$ffL: 'Lato', sans-serif; 
+
+/* --------- classes --------- */
+
+
+
+/* --------- adjustment --------- */
+
+@import "_misc/font-awesome";
+@import "_misc/fonts";
+@import "_misc/mixins";
+@import "_misc/adjustment";
+
+/* --------- sections --------- */
+
+@import "common/_header";
+// @import "sections/**/*";
