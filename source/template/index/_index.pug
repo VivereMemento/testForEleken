@@ -1,1 +1,36 @@
+section.catalog
+	.container
+		.catalog__heading
+			h1.heading Catalog
 
+		- var catalog = ["all", "t-shirts", "sweaters", "shorts", "jackets", "accessoires"]
+		ul.menu.catalog__menu
+			each item in catalog
+				li(class="menu__item" + ((item == "all") ? ' ' + 'active' : ''))
+					a(href="#" class="menu__link") #{item}
+
+		-
+			var goods = [
+				{img: "assets/img/1.jpg", disc: "Printed swimsuit", price: "$23", sale: ""},
+				{img: "assets/img/2.jpg", disc: "Jogging bermuda shorts", price: "$12", sale: "$36"},
+				{img: "assets/img/3.jpg", disc: "Basic beach flip flops", price: "$9", sale: ""},
+				{img: "assets/img/4.jpg", disc: "Black sunglasses", price: "$29", sale: ""},
+				{img: "assets/img/5.jpg", disc: "Long sleeved twill shirt", price: "$20", sale: ""},
+				{img: "assets/img/6.jpg", disc: "Basic swimsuit", price: "$36", sale: ""},
+				{img: "assets/img/7.jpg", disc: "Bleached shorts", price: "$12", sale: ""},
+				{img: "assets/img/8.jpg", disc: "T-shirt with lower panel", price: "$12", sale: "$32"}
+			]
+
+		ul.catalog__list
+			each good in goods
+				li.catalog__item
+					a.catalog__link(href="#")
+						figure.catalog__pic-wrap
+							img.catalog__pic(src="" + good.img)
+							figcaption.catalog__discription
+
+								span.catalog__discription-text #{good.disc}
+								span.catalog__discription-price(data-actual-price="" + good.sale, class="" + ((good.sale != "") ? ' ' + 'sale-price' : '')) #{good.price}
+
+		.catalog__load
+			a.catalog__load-link(href="#") load more...

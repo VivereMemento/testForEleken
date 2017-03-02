@@ -26,6 +26,13 @@ header.header
 					a.logo__link(href="#")
 						img.logo__pic(src="assets/img/logo.png")
 
+			.nav__menu
+				- var menu = ["home", "catalog", "news", "sale", "about", "contact"]
+				ul.menu
+					each item in menu
+						li(class="menu__item" + ((item == "catalog") ? ' ' + 'active' : ''))
+							a(href="#" class="menu__link" + ((item == "sale") ? ' ' + 'nav__menu-link_mods' : '')) #{item}
+
 			.user-tools
 				.user-tools__bag
 					span.user-tools__bag-text your bag
@@ -34,9 +41,10 @@ header.header
 					figure.user-tools__search-wrap
 						a.user-tools__search-link(href="#")
 							img.user-tools__search-pic(src="assets/img/search.png")
-
-			- var menu = ["home", "catalog", "news", "sale", "about", "contact"]
-			ul.nav__menu
-				each item in menu
-					li(class="nav__menu-item" + ((item == "catalog") ? ' ' + 'active' : ''))
-						a(href="#" class="nav__menu-link" + ((item == "sale") ? ' ' + 'nav__menu-link_mods' : '')) #{item}
+					.search-wrap
+						form#search(method="get", action="/search")
+							.search__input-item
+								label.search__label(for="search") Search
+								input.search__input(type="text", placeholder="Search", id="search", name="search")
+							.search__btn-wrap
+								input.search__btn(type="submit", value="", form="search")

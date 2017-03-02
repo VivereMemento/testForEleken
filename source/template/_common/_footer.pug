@@ -1,0 +1,14 @@
+footer.footer
+	nav.nav
+		.container
+			.logo
+				figure.logo__wrap
+					a.logo__link(href="#")
+						img.logo__pic(src="assets/img/logo.png")
+
+			.nav__menu
+				- var menu = ["home", "catalog", "news", "sale", "about", "contact"]
+				ul.menu
+					each item in menu
+						li(class="menu__item" + ((item == "catalog") ? ' ' + 'active' : ''))
+							a(href="#" class="menu__link" + ((item == "sale") ? ' ' + 'nav__menu-link_mods' : '')) #{item}
