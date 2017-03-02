@@ -1,0 +1,22 @@
+.footer__menu-link_mods {
+	color: $black;
+
+	&:hover {
+		color: #1476d4;
+	}
+
+	&:before, &:after {
+		display: none;
+	}
+}
+
+.copyright {
+	padding-top: 20px;
+	float: right;
+
+	&__text {
+		font-size: 12px;
+		font-weight: 700;
+		color: fade-out(#333, .5);
+	}
+}

@@ -11,4 +11,7 @@ footer.footer
 				ul.menu
 					each item in menu
 						li(class="menu__item" + ((item == "catalog") ? ' ' + 'active' : ''))
-							a(href="#" class="menu__link" + ((item == "sale") ? ' ' + 'nav__menu-link_mods' : '')) #{item}
+							a(href="#" class="menu__link footer__menu-link_mods" + ((item == "sale") ? ' ' + 'nav__menu-link_mods' : '')) #{item}
+
+			.copyright
+				span.copyright__text &copy;2010 - 2016 All rights reserved
