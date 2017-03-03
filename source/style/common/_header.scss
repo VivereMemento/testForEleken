@@ -1,13 +1,13 @@
 .header {
-	margin-bottom: 100px;
+	margin-bottom: 93px;
 }
 
 .header__top {
-	padding: 15px 0;
 	border-bottom: 1px solid #ededed;
 }
 
 .header__top-menu {
+	padding: 15px 0;
 	float: left;
 
 	&-item {
@@ -31,14 +31,53 @@
 	}
 }
 
-.header__top-money, .header__top-lang {
+.header__top-choose {
 	float: right;
 }
 
-.header__top-money-link {
+.header__top-money-link,
+.header__top-money-trigger,
+.header__top-lang-link,
+.header__top-lang-trigger {
 	@extend .header__top-menu-link;
 }
 
-.header__top-lang-link {
-	@extend .header__top-menu-link;
+.header__top-lang-trigger,
+.header__top-money-trigger {
+	padding: 15px 22px 15px 19px;
+	display: inline-block;
+	position: relative;
+
+	&:hover.header__top-lang-trigger:after,
+	&:hover.header__top-money-trigger:after {
+		transform: rotate(180deg);
+	}
+
+	&:after {
+		display: block;
+		content: "";
+		width: 10px;
+		height: 10px;
+		background: url(../img/arrow-down.png) no-repeat center center;
+		transition: all .3s;
+		position: absolute;
+		top: 15px;
+		right: 5px;
+	}
+}
+
+.header__top-money-trigger:after {
+	right: 0px;
+}
+
+.header__top-lang-trigger {
+	margin-left: 17px;
+	border-left: 1px solid #ededed;
+}
+
+.header__top-money, .header__top-lang {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }

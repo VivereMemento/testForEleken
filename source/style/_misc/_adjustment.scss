@@ -1,6 +1,6 @@
 /* --------- adjustment --------- */
 
-$container-width: 1140px;
+$container-width: 1153px;
 $footer-height: 100px;
 $body-font: $ffL;
 
@@ -39,17 +39,16 @@ body {
 .container {
     margin: 0 auto;
     position: relative;
-    padding: 0 15px;
     width: if($responsive == true, 100%, $container-width);
 	@include clearfix;
 
 	@if $responsive == true {
 		@include television {
-			width: 1140px;
+			width: $container-width;
 		}
 
 		@include largeDesktop {
-			width: 1140px;
+			width: $container-width
 		}
 
 		@include desktop {
@@ -76,7 +75,7 @@ body {
     height: auto !important;
     height: 100%;
     overflow: hidden;
-	//min-width: if($responsive == true, 100%, $container-width + 30px);
+	min-width: if($responsive == true, 100%, $container-width + 30px);
 
 	&:after {
 		content: "";
@@ -113,13 +112,9 @@ figure {
 
 footer {
 	position: relative;
-	//min-width: if($responsive == true, 100%, $container-width + 30);
+	min-width: if($responsive == true, 100%, $container-width + 30);
 	height: $footer-height;
 	margin-top: -$footer-height;
-	//position: absolute;
-	//bottom: 0;
-	//left: 0;
-	//right: 0;
 }
 
 * {

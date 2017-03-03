@@ -1,4 +1,4 @@
-#Учебная сборка Loftschool (выпускной проект №1) 
+#This is work-test for Eleken
 
 Stack:
  - Gulp 4.0

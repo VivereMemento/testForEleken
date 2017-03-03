@@ -7,17 +7,20 @@ header.header
 					li.header__top-menu-item
 						a.header__top-menu-link(href="#") #{item}
 
-			- var lang = ["en", "rus", "ua"]
-			ul.header__top-lang
-				each item in lang
-					li.header__top-lang-item
-						a.header__top-lang-link(href="#") #{item}
+			.header__top-choose
+				a.header__top-money-trigger(href="#") Dollars
+				- var money = ["dollars", "russian rubles", "ukrainian hryvnia"]
+				ul.header__top-money
+					each item in money
+						li.header__top-money-item
+							a.header__top-money-link(href="#") #{item}
 
-			- var money = ["dollars", "russian rubles", "ukrainian hryvnia"]
-			ul.header__top-money
-				each item in money
-					li.header__top-money-item
-						a.header__top-money-link(href="#") #{item}
+				a.header__top-lang-trigger(href="#") En
+				- var lang = ["en", "rus", "ua"]
+				ul.header__top-lang
+					each item in lang
+						li.header__top-lang-item
+							a.header__top-lang-link(href="#") #{item}
 
 	nav.nav
 		.container

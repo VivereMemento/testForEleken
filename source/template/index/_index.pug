@@ -11,24 +11,23 @@ section.catalog
 
 		-
 			var goods = [
-				{img: "assets/img/1.jpg", disc: "Printed swimsuit", price: "$23", sale: ""},
-				{img: "assets/img/2.jpg", disc: "Jogging bermuda shorts", price: "$12", sale: "$36"},
-				{img: "assets/img/3.jpg", disc: "Basic beach flip flops", price: "$9", sale: ""},
-				{img: "assets/img/4.jpg", disc: "Black sunglasses", price: "$29", sale: ""},
-				{img: "assets/img/5.jpg", disc: "Long sleeved twill shirt", price: "$20", sale: ""},
-				{img: "assets/img/6.jpg", disc: "Basic swimsuit", price: "$36", sale: ""},
-				{img: "assets/img/7.jpg", disc: "Bleached shorts", price: "$12", sale: ""},
-				{img: "assets/img/8.jpg", disc: "T-shirt with lower panel", price: "$12", sale: "$32"}
+				{img: "assets/img/1.jpg", species: "shorts", disc: "Printed swimsuit", price: "$23", sale: ""},
+				{img: "assets/img/2.jpg", species: "shorts", disc: "Jogging bermuda shorts", price: "$12", sale: "$36"},
+				{img: "assets/img/3.jpg", species: "accessoires", disc: "Basic beach flip flops", price: "$9", sale: ""},
+				{img: "assets/img/4.jpg", species: "accessoires", disc: "Black sunglasses", price: "$29", sale: ""},
+				{img: "assets/img/5.jpg", species: "shirts", disc: "Long sleeved twill shirt", price: "$20", sale: ""},
+				{img: "assets/img/6.jpg", species: "shorts", disc: "Basic swimsuit", price: "$36", sale: ""},
+				{img: "assets/img/7.jpg", species: "shorts", disc: "Bleached shorts", price: "$12", sale: ""},
+				{img: "assets/img/8.jpg", species: "t-shirts", disc: "T-shirt with lower panel", price: "$12", sale: "$32"}
 			]
 
 		ul.catalog__list
 			each good in goods
-				li.catalog__item
+				li.catalog__item(data-species="" + good.species, class="" + ((good.disc == "Basic beach flip flops") ? ' ' + 'catalog__item_new' : ''))
 					a.catalog__link(href="#")
 						figure.catalog__pic-wrap
 							img.catalog__pic(src="" + good.img)
 							figcaption.catalog__discription
-
 								span.catalog__discription-text #{good.disc}
 								span.catalog__discription-price(data-actual-price="" + good.sale, class="" + ((good.sale != "") ? ' ' + 'sale-price' : '')) #{good.price}
 

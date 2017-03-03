@@ -1,17 +1,17 @@
 footer.footer
-	nav.nav
+	nav.nav.footer__nav_mods
 		.container
 			.logo
 				figure.logo__wrap
 					a.logo__link(href="#")
 						img.logo__pic(src="assets/img/logo.png")
 
-			.nav__menu
+			.nav__menu.footer__nav-menu_mods
 				- var menu = ["home", "catalog", "news", "sale", "about", "contact"]
 				ul.menu
 					each item in menu
-						li(class="menu__item" + ((item == "catalog") ? ' ' + 'active' : ''))
-							a(href="#" class="menu__link footer__menu-link_mods" + ((item == "sale") ? ' ' + 'nav__menu-link_mods' : '')) #{item}
+						li(class="menu__item")
+							a(href="#" class="menu__link footer__menu-link_mods") #{item}
 
 			.copyright
 				span.copyright__text &copy;2010 - 2016 All rights reserved

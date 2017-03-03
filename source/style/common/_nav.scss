@@ -17,25 +17,34 @@
 
 .nav__menu {
 	width: 50%;
-	margin-left: 190px;
-	padding: 20px 0;
+	margin-left: 188px;
+	padding: 18px 0;
 	float: left;
 }
 
 .menu {
 
 	&__item {
-		margin-right: 55px;
+		margin-right: 53px;
 		display: inline-block;
 
 		&:last-child {
 			margin-right: 0;
 		}
+
+		&.active .menu__link {
+			color: $black;
+
+			&:after, &:before {
+				width: 50%;
+			}
+		}
 	}
 
 	&__link {
 		color: rgba(51, 51, 51, 0.45);
-		font-weight: 700;
+		font-size: 13px;
+		font-weight: 900;
 		text-transform: uppercase;
 		text-decoration: none;
 		position: relative;
@@ -56,7 +65,7 @@
 			height: 2px;
 			background: #1476d4;
 			position: absolute;
-			bottom: -5px;
+			bottom: -7px;
 			transition: all .3s;
 		}
 
@@ -85,7 +94,7 @@
 		@include clearfix;
 
 		&-text {
-			margin: 20px 10px 0 0;
+			margin: 19px 16px 0 0;
 			color: rgba(51, 51, 51, 0.45);
 			font-weight: 700;
 			text-transform: uppercase;
@@ -128,13 +137,17 @@
 	}
 
 	&__search {
-		margin: 20px 0 0 20px;
 		float: left;
 		position: relative;
+		width: 40px;
+		height: 40px;
+		padding: 10px 0 0 10px;
 	}
 }
 
 .user-tools__search-wrap {
+	width: 100%;
+	height: 100%;
 	margin: 0;
 }
 
@@ -142,6 +155,16 @@
 	display: block;
 	width: 100%;
 	height: 100%;
+	position: relative;
+}
+
+.user-tools__search-pic {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 // FORM *********************************************** /
@@ -184,7 +207,7 @@
 	background: url(../img/arrow.png) no-repeat center center;
 	border: none;
 	border-bottom-right-radius: 50px;
-    border-top-right-radius: 50px;
+	border-top-right-radius: 50px;
 	cursor: pointer;
 	transition: all .3s;
 
@@ -195,8 +218,8 @@
 
 .header__form-wrap_mods {
 	position: absolute;
-	top: 15px;
-	right: 15px;
+	top: 40px;
+	right: 0px;
 }
 
 .header__form-input_mods {
